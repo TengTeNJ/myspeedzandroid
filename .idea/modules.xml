@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Potent.iml" filepath="$PROJECT_DIR$/Potent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Appmsg/Potent.Appmsg.iml" filepath="$PROJECT_DIR$/.idea/modules/Appmsg/Potent.Appmsg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Appmsg/Potent.Appmsg.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Appmsg/Potent.Appmsg.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Appmsg/Potent.Appmsg.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Appmsg/Potent.Appmsg.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Appmsg/Potent.Appmsg.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Appmsg/Potent.Appmsg.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EventBus/Potent.EventBus.iml" filepath="$PROJECT_DIR$/.idea/modules/EventBus/Potent.EventBus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EventBus/Potent.EventBus.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/EventBus/Potent.EventBus.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EventBus/Potent.EventBus.main.iml" filepath="$PROJECT_DIR$/.idea/modules/EventBus/Potent.EventBus.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EventBus/Potent.EventBus.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/EventBus/Potent.EventBus.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library_AndroidSwipeLayout/Potent.Library_AndroidSwipeLayout.iml" filepath="$PROJECT_DIR$/.idea/modules/Library_AndroidSwipeLayout/Potent.Library_AndroidSwipeLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library_AndroidSwipeLayout/Potent.Library_AndroidSwipeLayout.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Library_AndroidSwipeLayout/Potent.Library_AndroidSwipeLayout.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library_AndroidSwipeLayout/Potent.Library_AndroidSwipeLayout.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Library_AndroidSwipeLayout/Potent.Library_AndroidSwipeLayout.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library_AndroidSwipeLayout/Potent.Library_AndroidSwipeLayout.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Library_AndroidSwipeLayout/Potent.Library_AndroidSwipeLayout.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library_Expandablelayout/Potent.Library_Expandablelayout.iml" filepath="$PROJECT_DIR$/.idea/modules/Library_Expandablelayout/Potent.Library_Expandablelayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library_Expandablelayout/Potent.Library_Expandablelayout.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Library_Expandablelayout/Potent.Library_Expandablelayout.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library_Expandablelayout/Potent.Library_Expandablelayout.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Library_Expandablelayout/Potent.Library_Expandablelayout.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library_Expandablelayout/Potent.Library_Expandablelayout.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Library_Expandablelayout/Potent.Library_Expandablelayout.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MPChartLib/Potent.MPChartLib.iml" filepath="$PROJECT_DIR$/.idea/modules/MPChartLib/Potent.MPChartLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MPChartLib/Potent.MPChartLib.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/MPChartLib/Potent.MPChartLib.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MPChartLib/Potent.MPChartLib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MPChartLib/Potent.MPChartLib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MPChartLib/Potent.MPChartLib.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/MPChartLib/Potent.MPChartLib.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Potent.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Potent.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Potent.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Potent.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Potent.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Potent.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Potent.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Potent.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

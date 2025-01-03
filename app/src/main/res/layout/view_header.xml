@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_key"
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        style="@style/set_style"
+        android:text="@string/speed_units" />
+
+    <ImageView
+        android:id="@+id/img_speedunits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_right"
+        android:layout_marginRight="15dip"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/text_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        style="@style/set_style"
+        android:layout_toLeftOf="@id/img_speedunits"
+        android:layout_marginRight="10dip"
+        android:text="@string/speed_units" />
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <!--白色 -->
+    <color name="appred">#EF4C47</color><!--多数红 -->
+    <color name="dialog_button">#b4b4b4</color>
+    <color name="appupdate">#646464</color>
+    <!--软件更新字体颜色 -->
+    <color name="dialog_message_color">#505050</color>
+    <!--弹出框字体颜色-->
+    <color name="background_color">#E6E6E6</color>
+    <!--页面背景颜色 -->
+    <color name="black">#000</color>
+    <color name="motk_green">#86D09B</color>
+    <color name="button_primary_pressed_edge">#4CB66A</color>
+    <color name="button_primary_pressed_end">#F8FEFC</color>
+    <color name="title_background">#A5E2B9</color>
+
+    <!--登陆/注册-->
+    <color name="login_shap_stroke">#cfcfcf</color> <!--账号/密码 边框-->
+    <color name="login_shap_edit">#fafafa</color> <!--密码输入框背景色-->
+    <color name="regist_tab_textview">#c8c8c8</color> <!--密码输入框背景色-->
+
+    <color name="common_input_focus">#ff1AB969</color>
+    <color name="common_input_unfocus">#CCCCCC</color>
+    <color name="common_btn_unpressed">#ff1AB969</color>
+    <color name="common_btn_pressed">#ff91D499</color>
+    <color name="common_btn_text_unpressed">#FEFEFE</color>
+    <color name="common_btn_text_pressed">#CCE6FF</color>
+    <color name="common_line">#DADADA</color>
+    <color name="app_blue">#ff1AB969</color>
+    <color name="blue">#2F1EA8</color>
+    <color name="gray">#ffff0000</color>
+    <color name="right_btn_storkecolor">#ff1AB969</color>
+    <!--设置-->
+    <color name="set_color">#41AC59</color><!--字体颜色-->
+    <color name="divider_color">#47AC5F</color><!--ListView分割线颜色 -->
+    <color name="select">#2F1EA8</color>
+
+    <color name="set_tips_red">#E01C1C</color>
+</resources>

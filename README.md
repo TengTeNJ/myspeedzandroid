@@ -1,2 +1,0 @@
-# myspeedzandroid
-myspeedz android

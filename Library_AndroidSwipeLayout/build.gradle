@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+//        applicationId 'com.daimajia.swipe'
+        minSdkVersion 8
+        targetSdkVersion 29
+    }
+    buildTypes {
+        release {
+//            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    namespace 'com.daimajia.swipe'
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.customview:customview:1.0.0'
+}

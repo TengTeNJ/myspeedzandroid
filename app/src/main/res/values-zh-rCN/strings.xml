@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Myspeedz</string>
+    <string name="line">分割线</string>
+    <string name="app_crash">程序崩溃，请重新启动。</string>
+    <string name="confirm">确定</string>
+    <string name="Cancel">取消</string>
+    <string name="title_activity_activity_main">Myspeedz</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="back">&lt;  </string>
+    <string name="chart">图表</string>
+    <string name="list">数据</string>
+    <string name="setup">设置</string>
+    <string name="help">帮助</string>
+    <string name="delete_all">删除所有</string>
+    <string name="speeddefaul">0.0</string>
+    <string name="speed_company">Km/h</string>
+    <string name="clear">清除</string>
+    <string name="save">保存</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user1">Default1</string>
+    <string name="user2">Default2</string>
+    <string name="new_user">新增用户</string>
+    <string name="hight">高</string>
+    <string name="weight">宽</string>
+    <string name="BMI">BMI</string>
+    <string name="speed">速度</string>
+    <string name="title_activity_activity_lungcher">ActivityLungcher</string>
+    <string name="title_activity_activity__list">List</string>
+    <string name="text_date">时间</string>
+    <string name="Scan_Device">设备</string>
+    <string name="app_bt_conn">蓝牙连接</string>
+    <string name="username">用户名</string>
+    <!-- Controller Activity -->
+    <string name="status_message">Welcome to APRA...</string>
+
+    <!-- BluetoothConn -->
+    <string name="not_connected">您还未连接蓝牙设备</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+    <string name="title_connecting">连接中</string>
+    <string name="title_connected_to">已连接</string>
+    <string name="title_not_connected">未连接</string>
+    <string name="disconnect_socket">Disconnect socket</string>
+    <string name="about_title">关于</string>
+    <string name="about_content">    Version :1.0.1 \n
+    Modification : Use new API to fix the bug of SSP. \nChange the package name for compatibly with the old App.</string>
+    <string name="about_dialog_ok">OK</string>
+
+    <!-- DeviceListActivity -->
+    <string name="scanning">扫描蓝牙设备</string>
+    <string name="select_device">请选择一个设备来连接</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">未找到设备</string>
+    <string name="title_paired_devices">Promt</string>
+    <string name="title_other_devices">其他设备</string>
+    <string name="button_scan">扫描</string>
+
+    <!-- ConnectedDeviceListActivity -->
+    <string name="title_connected_devices">已连接设备s</string>
+    <string name="select_disconnect_device">选择一个设备来断开</string>
+
+    <!-- AboutInfoActivity -->
+
+
+    <!-- Options Menu -->
+    <string name="connect">Connect a device</string>
+    <string name="discoverable">Make discoverable</string>
+    <string name="disconnect">Disconnect connection</string>
+    <string name="setting">设置</string>
+    <string name="monitor">Start Monitor</string>
+    <string name="about">About</string>
+
+    <!-- AudioStateModel -->
+    <string name="proximity_alert">Proximity alert</string>
+
+    <!-- SettingPreferenceActivity -->
+    <string name="signal_level_pref_category">Signal level notification</string>
+
+    <!-- Settings Menu -->
+    <string name="pref_setting">Preference setting</string>
+
+    <!-- file_dialog -->
+    <string name="file_dialog">File dialog</string>
+    <string name="location">Location</string>
+    <string name="cant_read_folder">folder can\'t be read!</string>
+    <string name="nnew">New</string>
+    <string name="select">Select</string>
+    <string name="file_name">File name:</string>
+    <string name="cancel">取消</string>
+    <string name="create">保存</string>
+    <string name="no_data">无数据</string>
+    <string name="speed_units">单位</string>
+    <string name="Model">模式</string>
+    <string name="pattern">模式</string>
+    <string name="language">语言</string>
+    <string name="english">English</string>
+    <string name="user">用户</string>
+    <string name="title_activity_activity_seting">ActivitySeting</string>
+    <color name="main_listviewtext_color">#505050</color><!--字体颜色-->
+    <string name="rename">重命名</string>
+    <string name="Choose">选定</string>
+    <string name="delete">删除</string>
+    <string name="effect">已设置，下次启动时生效</string>
+    <string name="again_to_exit">请再按一次而退出</string>
+
+    <string name="model1">Single Mode</string>
+    <string name="model_messge1">Practice by challenging yourself! Your highest 10 scores will be selected as records.</string>
+    <string name="model_bottom1">BEAT YOUR SCORE</string>
+    <string name="model2">Battle Mode</string>
+    <string name="model_messge2">The rules are simple.Challenge your friends or teammates.5 pucks for each player,each round of scores will be recorded.</string>
+    <string name="per_cancel">Cancel</string>
+    <string name="model_bottom2">BATTLE TO WIN</string>
+</resources>

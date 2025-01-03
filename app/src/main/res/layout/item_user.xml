@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="@color/divider_color" />
+    <com.daimajia.swipe.SwipeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:id="@+id/swipeuser">
+    <LinearLayout
+        android:tag="Bottom1"
+        android:background="#66ddff00"
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="240dp"
+
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/rename"
+            android:text="@string/rename"
+            android:textColor="#fff"
+            android:background="#808080"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:layout_width="0dip"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/chooseuser"
+            android:text="@string/Choose"
+            android:textColor="#fff"
+            android:background="#81007F"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:layout_width="0dip"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/delete"
+            android:textColor="#fff"
+            android:text="@string/delete"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:background="#FE0000"
+            android:layout_width="0dip"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/username_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                style="@style/set_style"
+                android:text="@string/user1" />
+        </RelativeLayout>
+    </com.daimajia.swipe.SwipeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./MPChartLib/libs/nineoldandroids-2.4.0-2.jar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MPChartLib/libs/nineoldandroids-2.4.0-2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

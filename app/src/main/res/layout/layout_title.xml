@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:background="@color/title_background"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/text_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/link_title_text"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dip"
+        android:textSize="15sp"
+        android:text="@string/back"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/button_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="3dip"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/bg_button"
+        android:textColor="@color/button_title_text"
+        android:text="@string/Scan_Device"
+        android:visibility="gone"/>
+</RelativeLayout>

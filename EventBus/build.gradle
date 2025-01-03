@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+//        applicationId 'de.greenrobot.event'
+        minSdkVersion 8
+        targetSdkVersion 29
+    }
+    buildTypes {
+        release {
+//            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    namespace 'de.greenrobot.event'
+}
+
+dependencies {
+    implementation 'androidx.fragment:fragment:1.2.4'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+}

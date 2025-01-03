@@ -1,0 +1,1 @@
+include ':app',':EventBus',':MPChartLib',':Appmsg', ':Library_Expandablelayout', ':Library_AndroidSwipeLayout'

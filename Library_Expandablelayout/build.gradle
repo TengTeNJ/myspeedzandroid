@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+//        applicationId 'com.andexert.expandablelayout.library'
+        minSdkVersion 14
+        targetSdkVersion 29
+    }
+    buildTypes {
+        release {
+//            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    namespace 'com.andexert.expandablelayout.library'
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+}

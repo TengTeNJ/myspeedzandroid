@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="42dp"
+                >
+    <ImageButton
+        android:id="@+id/warming_img"
+        android:layout_width="32dip"
+        android:layout_height="32dip"
+        android:layout_marginRight="4dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/net_warning"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/line"/>
+
+    <TextView
+        android:id="@android:id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/warming_img"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"
+        android:textColor="#ff2a271e"
+        android:textIsSelectable="false"
+        android:textSize="14sp"
+        android:textStyle="bold"
+            />
+
+</RelativeLayout>

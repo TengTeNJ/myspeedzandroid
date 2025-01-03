@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature
+        android:name="android.bluetooth.le"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <application
+        android:name=".common.PotentApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:configChanges="locale"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ui.ActivityMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".ui.DynamicalAddingActivity" >
+        </activity>
+        <activity
+            android:name=".ui.ActivityLungcher"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ActivityList"
+            android:label="@string/title_activity_activity__list" >
+        </activity>
+
+        <activity
+            android:name=".ui.DeviceListDialogActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/select_device"
+            android:theme="@style/MyDialogStyle" />
+        <!-- file_dialog -->
+        <activity
+            android:name=".ui.FileDialog"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/file_dialog"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name=".ui.ActivitySeting"
+            android:label="@string/title_activity_activity_seting"
+            android:configChanges="locale">
+
+        </activity>
+        <activity
+            android:name=".ui.ActivityHelp"
+            android:label="@string/help"
+            android:configChanges="locale">
+
+        </activity>
+    </application>
+
+</manifest>

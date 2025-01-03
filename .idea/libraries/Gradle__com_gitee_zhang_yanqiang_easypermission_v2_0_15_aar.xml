@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.gitee.zhang-yanqiang:easypermission:v2.0.15@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/Android/DigitalShoots/gradle/caches/transforms-3/956fc2cee246490c512b75778ad2a51c/transformed/jetified-easypermission-v2.0.15/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Desktop/Android/DigitalShoots/gradle/caches/transforms-3/956fc2cee246490c512b75778ad2a51c/transformed/jetified-easypermission-v2.0.15/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/Desktop/Android/DigitalShoots/gradle/caches/transforms-3/956fc2cee246490c512b75778ad2a51c/transformed/jetified-easypermission-v2.0.15/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Desktop/Android/DigitalShoots/gradle/caches/modules-2/files-2.1/com.gitee.zhang-yanqiang/easypermission/v2.0.15/71499d8969594647a2b76b00a1653a9fb38a9664/easypermission-v2.0.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

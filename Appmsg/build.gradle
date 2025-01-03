@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+//        applicationId 'com.devspark.appmsg'
+        minSdkVersion 8
+        targetSdkVersion 33
+    }
+    buildTypes {
+        release {
+//            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    namespace 'com.devspark.appmsg'
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+}

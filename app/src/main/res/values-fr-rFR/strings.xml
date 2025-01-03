@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Myspeedz</string>
+    <string name="line">Ligne de division</string>
+    <string name="app_crash">Crash du programme, veuillez redémarrer.</string>
+    <string name="confirm">confirmer</string>
+    <string name="Cancel">annuler</string>
+    <string name="title_activity_activity_main">Myspeedz</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="back">&lt;  </string>
+    <string name="chart">Tableau</string>
+    <string name="list">Liste</string>
+    <string name="setup">Paramètres</string>
+    <string name="help">Aide</string>
+    <string name="delete_all">Supprimer tout</string>
+    <string name="speeddefaul">0.0</string>
+    <string name="speed_company">Km/h</string>
+    <string name="clear">Clairement</string>
+    <string name="save">Sauver</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user1">Violation1</string>
+    <string name="user2">Violation2</string>
+    <string name="new_user">Ajouter un nouvel utilisateur</string>
+    <string name="hight">Haute</string>
+    <string name="weight">Weight</string>
+    <string name="BMI">Poids</string>
+    <string name="speed">vitesse</string>
+    <string name="title_activity_activity_lungcher">ActivityLungcher</string>
+    <string name="title_activity_activity__list">Liste</string>
+    <string name="text_date">Température</string>
+    <string name="Scan_Device">Le dispositif</string>
+    <string name="app_bt_conn">Bluetooth Conn</string>
+
+    <!-- Controller Activity -->
+    <string name="status_message">Bienvenue à visiter APRA...</string>
+
+    <!-- BluetoothConn -->
+    <string name="not_connected">"Vous n'êtes pas connecté à l'appareil"</string>
+    <string name="bt_not_enabled_leaving">"Bluetooth n'est pas activé. Quittez le chat Bluetooth."</string>
+    <string name="title_connecting">Connexion...</string>
+    <string name="title_connected_to">Avec contact: </string>
+    <string name="title_not_connected">Non connecté</string>
+    <string name="disconnect_socket">Déconnecter la prise</string>
+    <string name="about_title">À propos</string>
+    <string name="about_content">   Version: 1.0.1 \ n
+Modification: correction de bugs avec SSP avec une nouvelle API. \ changez le nom du package pour être compatible avec les anciennes applications.</string>
+    <string name="about_dialog_ok">Bien</string>
+
+    <!-- DeviceListActivity -->
+    <string name="scanning">Équipement de scan...</string>
+    <string name="select_device">Sélectionnez les appareils à connecter</string>
+    <string name="none_paired">"Pas de jumelage d'équipement"</string>
+    <string name="none_found">Aucun équipement trouvé</string>
+    <string name="title_paired_devices">Le bal</string>
+    <string name="title_other_devices">Autres équipements disponibles</string>
+    <string name="button_scan">Scan</string>
+
+    <!-- ConnectedDeviceListActivity -->
+    <string name="title_connected_devices">Appareils connectés</string>
+    <string name="select_disconnect_device">"électionnez l'appareil que vous souhaitez déconnecter"</string>
+
+    <!-- AboutInfoActivity -->
+
+
+    <!-- Options Menu -->
+    <string name="connect">Appareils connectés</string>
+    <string name="discoverable">Le rendre détectable</string>
+    <string name="disconnect">Déconnecter</string>
+    <string name="setting">Contexte</string>
+    <string name="monitor">Démarrer le moniteur</string>
+    <string name="about">À propos</string>
+
+    <!-- AudioStateModel -->
+    <string name="proximity_alert">Alarme de proximité</string>
+
+    <!-- SettingPreferenceActivity -->
+    <string name="signal_level_pref_category">Notification de niveau de signal</string>
+
+    <!-- Settings Menu -->
+    <string name="pref_setting">Paramètres de préférence</string>
+
+    <!-- file_dialog -->
+    <string name="file_dialog">Boîte de dialogue fichiers</string>
+    <string name="location">Lieux</string>
+    <string name="cant_read_folder">Le dossier ne peut pas être lu!</string>
+    <string name="nnew">Nouveau</string>
+    <string name="select">Sélection</string>
+    <string name="file_name">Nom du fichier:</string>
+    <string name="cancel">Annulation</string>
+    <string name="create">Sauver</string>
+    <string name="no_data">Aucune donnée</string>
+    <string name="speed_units">Unités de vitesse</string>
+    <string name="Model">Changer le modèle</string>
+    <string name="pattern">Modèle</string>
+    <string name="language">Langue</string>
+    <string name="english">Anglais</string>
+    <string name="user">utilisateur</string>
+    <string name="title_activity_activity_seting">"Paramètres d'activité"</string>
+    <color name="main_listviewtext_color">#505050</color><!--字体颜色-->
+    <string name="rename">Renommer</string>
+    <string name="Choose">Sélection</string>
+    <string name="delete">Supprimer</string>
+    <string name="effect">Impact sur le prochain démarrage</string>
+    <string name="again_to_exit">Pressed again to exit</string>
+    <string name="username">nom d’utilisateur</string>
+
+    <string name="model1">Un seul mode</string>
+    <string name="model_messge1">Pratiquez en vous mettant au défi! Votre maximum de 10 points sera sélectionné comme record.</string>
+    <string name="model_bottom1">Dépasser votre score</string>
+    <string name="model2">Mode de combat</string>
+    <string name="model_messge2">Les règles sont simples. Défiez vos amis ou vos coéquipiers. 5 rondelles par joueur et chaque tour de score est enregistré.</string>
+    <string name="model_bottom2">Se battre pour la victoire</string>
+
+    <string name="new_user_name">Nouveaux utilisateurs</string>
+    <string name="user_name">"Nom d'utilisateur"</string>
+    <string name="user_name1">"Nom d'utilisateur 1"</string>
+    <string name="new_name">Nouveau nom</string>
+
+
+    <string name="single_model">Modèle unique</string>
+    <string name="battle_model">Modèle de combat</string>
+
+    <string name="per_title">Myspeedz Autorisation de localisation requise</string>
+    <string name="per_message">"Communication Bluetooth dépend des autorisations de localisation du système, veuillez autoriser l'ouverture des autorisations"</string>
+    <string name="per_cancel">Annulation</string>
+    <string name="sure">Allez ouvrir</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <!-- 
+    	编辑框控件
+    	宽度匹配屏幕
+    	高度适应文字
+    	在编辑框左边画上搜索的那个图片
+    	单行编辑框
+     -->
+	<EditText 
+	    android:id="@+id/et_custom_input"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:singleLine="true"
+	    android:inputType="textEmailAddress"
+    	android:imeOptions="actionSearch"/>
+	<!-- 
+		图片控件
+		宽度高度都是适应图片大小
+		图片资源来自一个配置文件
+		对齐在编辑框的右边
+		默认不可见且不占用屏幕位置
+	 -->
+	<ImageView
+	    android:id="@+id/ib_custom_delete"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/close_button"
+	    android:layout_alignRight="@id/et_custom_input"
+	    android:layout_marginRight="5dp"
+	    android:layout_alignTop="@id/et_custom_input"
+	    android:layout_alignBottom="@id/et_custom_input"
+	    android:layout_marginTop="2dip"
+	    android:layout_marginBottom="2dip"
+	    android:visibility="gone"
+	    android:contentDescription="@string/line"
+	    />
+</RelativeLayout>

@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+//        applicationId 'com.github.mikephil.charting'
+        minSdkVersion 8
+        targetSdkVersion 29
+    }
+    buildTypes {
+        release {
+//            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    namespace 'com.github.mikephil.charting'
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api files('libs/nineoldandroids-2.4.0-2.jar')
+}
