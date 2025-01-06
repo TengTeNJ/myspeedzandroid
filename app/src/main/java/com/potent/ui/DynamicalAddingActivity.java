@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -71,14 +72,26 @@ public class DynamicalAddingActivity extends BaseActivity implements OnChartValu
         addDataSet();
         mChart.invalidate();
         IntentFilter mFilter01 = new IntentFilter(INCOMING_MSG);
-        PotentApplication.getContext().registerReceiver(new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                userDao = new UserDao(context);
-                addEmptyData();
-                addDataSet();
-            }
-        }, mFilter01);
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            PotentApplication.getContext().registerReceiver(new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    userDao = new UserDao(context);
+                    addEmptyData();
+                    addDataSet();
+                }
+            }, mFilter01,Context.RECEIVER_EXPORTED);
+        }else {
+            PotentApplication.getContext().registerReceiver(new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    userDao = new UserDao(context);
+                    addEmptyData();
+                    addDataSet();
+                }
+            }, mFilter01);
+        }
+
     }
 
 

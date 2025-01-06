@@ -1,5 +1,7 @@
 package com.potent.server;
 
+import android.Manifest;
+import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
@@ -14,8 +16,10 @@ import android.bluetooth.le.ScanFilter;
 import android.bluetooth.le.ScanResult;
 import android.bluetooth.le.ScanSettings;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Handler;
+import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.ParcelUuid;
 import android.util.Log;
@@ -32,6 +36,8 @@ import java.util.UUID;
 import static android.bluetooth.BluetoothDevice.TRANSPORT_LE;
 import static android.content.Context.BLUETOOTH_SERVICE;
 
+import androidx.core.app.ActivityCompat;
+
 public class BleDeviceManager {
     private static final String TAG = "BleDeviceManager";
 
@@ -47,6 +53,7 @@ public class BleDeviceManager {
     public static final String INCOMING_MSG = "INCOMING_MSG";
 
     private Handler handler;
+    private Handler handler2;
     List<BluetoothDevice> devices = new ArrayList<>();
 
     private Set<String> mDeviceMac = new HashSet<>();
@@ -78,6 +85,9 @@ public class BleDeviceManager {
 
     //构造函数私有
     private BleDeviceManager() {
+        HandlerThread thread = new HandlerThread("handler2");
+        thread.start();
+        handler2 = new Handler(thread.getLooper());
         handler = new Handler(Looper.getMainLooper());
         //获取蓝牙适配器
         BluetoothManager bluetoothManager = (BluetoothManager) PotentApplication.getContext().getSystemService(BLUETOOTH_SERVICE);//这里与标准蓝牙略有不同
@@ -189,8 +199,18 @@ public class BleDeviceManager {
         if (bluetoothGatt == null) {
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                bluetoothGatt = device.connectGatt(PotentApplication.getContext(),
-                        true, gattCallback, TRANSPORT_LE);
+                handler2.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                bluetoothGatt = device.connectGatt(PotentApplication.getContext(),
+                                        true, gattCallback);
+                            }
+                        });
+                    }
+                }, 3000);
             } else {
                 bluetoothGatt = device.connectGatt(PotentApplication.getContext(),
                         true, gattCallback);
@@ -215,7 +235,15 @@ public class BleDeviceManager {
                         if (uiConnectCallback != null) {
                             uiConnectCallback.onSuccess();
                         }
-                        gatt.discoverServices();
+
+                        handler2.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                handler.post(() ->{
+                                    gatt.discoverServices();
+                                });
+                            }
+                        }, 2000);
                         break;
                     case BluetoothProfile.STATE_DISCONNECTED:
                         Log.i(TAG, "gattCallback,STATE_DISCONNECTED");

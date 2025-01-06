@@ -15,12 +15,12 @@ android {
             keyPassword "android"
         }
     }
-    compileSdkVersion 33
+    compileSdkVersion 34
     defaultConfig {
         applicationId 'com.potent.myspeedz'
         minSdkVersion 24
         targetSdkVersion 34
-        versionCode 103
+        versionCode 1600
         versionName '1.0.5'
     }
     buildTypes {

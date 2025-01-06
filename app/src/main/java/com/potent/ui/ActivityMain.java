@@ -1,6 +1,7 @@
 package com.potent.ui;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -47,7 +48,9 @@ import java.util.Date;
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 
@@ -56,7 +59,13 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
 
+import static android.content.Context.*;
 import static android.view.Gravity.CENTER_VERTICAL;
+
+import android.content.BroadcastReceiver;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Build;
 
 public class ActivityMain extends BaseActivity implements View.OnClickListener {
     @BindView(R.id.test)
@@ -88,7 +97,17 @@ public class ActivityMain extends BaseActivity implements View.OnClickListener {
     public static final String ALERT_MSG = "ALERT_MSG";
     private BluetoothAdapter mBluetoothAdapter = null;
     private MainViewModel mainViewModel;
+    private static final int REQUEST_BLUETOOTH_PERMISSIONS = 1;  // This is the request code
 
+    //    @Override
+//    public Intent registerReceiver(@Nullable BroadcastReceiver receiver, IntentFilter filter) {
+//        if (Build.VERSION.SDK_INT >= 34 && getApplicationInfo().targetSdkVersion >= 34) {
+//            return super.registerReceiver(receiver, filter, Context.RECEIVER_VISIBLE_TO_INSTANT_APPS);
+//        } else {
+//            return super.registerReceiver(receiver, filter);
+//        }
+//    }
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,10 +123,57 @@ public class ActivityMain extends BaseActivity implements View.OnClickListener {
 
         IntentFilter mFilter01;
         mFilter01 = new IntentFilter(INCOMING_MSG);
-        registerReceiver(mainViewModel.getNotiReceiver(), mFilter01);
-        registerReceiver(mainViewModel.getNotiReceiver(), new IntentFilter(ALERT_MSG));
-        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+//        registerReceiver(mainViewModel.getNotiReceiver(), mFilter01);
+        // 检查并申请权限
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            // Android 12 (API 31) 及以上版本
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                // 申请蓝牙扫描和连接权限
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT},
+                        REQUEST_BLUETOOTH_PERMISSIONS);
+            }
+        } else {
+            // Android 12 以下版本，申请常规蓝牙权限和位置权限
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN) != PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // 申请普通蓝牙和位置权限
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.BLUETOOTH,
+                                Manifest.permission.BLUETOOTH_ADMIN,
+                                Manifest.permission.ACCESS_FINE_LOCATION},
+                        REQUEST_BLUETOOTH_PERMISSIONS);
+            }
+        }
 
+
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+//            // 在 Android 14 及以上版本中，需要指定接收器是否导出
+//            //String permission = android.Manifest.permission.RECEIVE_BOOT_COMPLETED;
+//           registerReceiver(mainViewModel.getNotiReceiver(), new IntentFilter(ALERT_MSG), String.valueOf(RECEIVER_EXPORTED), null);
+//           // registerReceiver(mNotiReceiver, filter, Context.RECEIVER_NOT_EXPORTED, null);
+//        } else {
+//            // 在 Android 13 及以下版本中，不需要指定导出行为
+//           // registerReceiver(mNotiReceiver, filter);
+//            registerReceiver(mainViewModel.getNotiReceiver(), new IntentFilter(ALERT_MSG));
+//        }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT}, 1);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            registerReceiver(mainViewModel.getNotiReceiver(), mFilter01, Context.RECEIVER_EXPORTED);
+            registerReceiver(mainViewModel.getNotiReceiver(), new IntentFilter(ALERT_MSG), Context.RECEIVER_EXPORTED);
+        } else {
+            registerReceiver(mainViewModel.getNotiReceiver(), mFilter01);
+            registerReceiver(mainViewModel.getNotiReceiver(), new IntentFilter(ALERT_MSG));
+        }
+        //registerReceiver(mainViewModel.getNotiReceiver(), new IntentFilter(ALERT_MSG));
+        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        // BleDeviceManager.getInstance();
         // If the adapter is null, then Bluetooth is not supported
         if (mBluetoothAdapter == null) {
             toastMsg("Bluetooth is not available");
@@ -165,7 +231,7 @@ public class ActivityMain extends BaseActivity implements View.OnClickListener {
                 @Override
                 public void onPageSelected(int i) {
                     SharedPreferences instance = SPUtils.getInstance(getApplicationContext(),
-                            Constants.SPNAME, Context.MODE_PRIVATE);
+                            Constants.SPNAME, MODE_PRIVATE);
                     int userId = adapter.getM_w_views().get(i).getUserId();
                     mainViewModel.setUserID(userId);
                     SPUtils.setSharedInt(instance, Constants.USERID, userId);
@@ -244,8 +310,6 @@ public class ActivityMain extends BaseActivity implements View.OnClickListener {
         appMsg.setLayoutGravity(CENTER_VERTICAL);
         appMsg.setPriority(AppMsg.PRIORITY_HIGH);
         appMsg.show();
-
-
     }
 
     @Override

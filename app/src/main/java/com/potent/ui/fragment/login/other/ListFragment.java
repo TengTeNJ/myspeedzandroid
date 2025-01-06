@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -85,14 +86,27 @@ public class ListFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         IntentFilter mFilter01 = new IntentFilter(INCOMING_MSG);
-        PotentApplication.getContext().registerReceiver(new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                userDao = new UserDao(getContext());
-                userBeans = userDao.queryByID(userID);
-                loadData();
-            }
-        }, mFilter01);
+
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            PotentApplication.getContext().registerReceiver(new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    userDao = new UserDao(getContext());
+                    userBeans = userDao.queryByID(userID);
+                    loadData();
+                }
+            }, mFilter01,Context.RECEIVER_EXPORTED);
+        }else {
+            PotentApplication.getContext().registerReceiver(new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    userDao = new UserDao(getContext());
+                    userBeans = userDao.queryByID(userID);
+                    loadData();
+                }
+            }, mFilter01);
+        }
+
         Bundle args = getArguments();
         if (args != null) {
             isSecond = args.getBoolean("isSecond");
